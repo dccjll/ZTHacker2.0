@@ -1,0 +1,147 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.neenbedankt.android-apt'
+//apply plugin: 'com.mob.sdk'//shareSDK
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "com.example.auser.zthacker"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 3
+        versionName "2.3.6"
+        multiDexEnabled = true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库，兼容64位手机。
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a','x86', 'x86_64', 'mips', 'mips64'
+        }
+
+       /* manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "42a94a33195ec78eae9c25ab", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]*/
+    }
+    //执行lint检查，有任何的错误或者警告提示，都会终止构建，我们可以将其关掉。
+    lintOptions {
+        abortOnError false
+    }
+    buildTypes {
+        release {
+            // 如果没有提供混淆规则文件，则设置默认的混淆规则文件（SDK/tools/proguard/proguard-android.txt）
+            pseudoLocalesEnabled true
+            // 不显示Log
+            //buildConfigField "boolean", "LOG_DEBUG", "false"
+            debuggable false
+            //混淆
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            //加载默认混淆配置文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+}
+
+repositories{
+    flatDir{
+        dirs 'libs'
+    }
+    google()
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:27.1.1'
+    compile 'com.android.support:support-v4:27.1.1'
+    compile 'com.android.support:cardview-v7:27.1.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:design:27.1.1'
+    //视图绑定 butterknife
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'de.greenrobot:eventbus:3.0.0-beta1'
+    //compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile files('libs/picasso-2.5.2.jar')
+    //compile files('libs/gson-2.3.1.jar')
+    compile files('libs/zxing.jar')
+    compile files('libs/tbs_sdk_thirdapp_v3.2.0.1104_43200_sharewithdownload_withfilereader_withoutGame_obfs_20170609_115346.jar')
+    //二维码扫描
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    //拍照获取图片
+    compile 'cn.finalteam:galleryfinal:1.4.8.7'
+    //banner轮播
+    compile 'cn.bingoogolapple:bga-banner:2.1.7'
+    //okgo
+    compile 'com.lzy.net:okgo:2.1.4'
+    compile 'com.android.support:multidex:1.0.1'
+    //compileSdkVersion 25以下
+    //极光推送
+    //compile 'cn.jiguang.sdk:jpush:3.0.5'  // 此处以JPush 3.0.5 版本为例。
+    //compile 'cn.jiguang.sdk:jcore:1.1.2'  // 此处以JCore 1.1.2 版本为例。
+    implementation project(':SwipeAndLoadLayout')
+    implementation project(':jcvideoplayer-lib')
+    implementation project(':picture_library')
+    compile 'com.qiniu:qiniu-android-sdk:7.1.2'
+    //七牛sdk
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.3'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3'
+}
+
+/*MobSDK {
+    appKey "23cf749f1fe38"
+    appSecret "85a93ae1a5e5c81941f2f6948c67e17a"
+
+    ShareSDK {
+        //平台配置信息
+        devInfo {
+            SinaWeibo {
+                appKey "2288529570"
+                appSecret "2e27697510a42bbd00490bab792a3459"
+                callbackUri "https://sns.whalecloud.com/sina2/callback"
+                shareByAppClient true
+            }
+            Wechat {
+                appId "wxa2b1326fffc49463"
+                appSecret "b1719d1f7dadc42fd63a4a7d34846207"
+                shareByAppClient true
+                bypassApproval true
+            }
+            WechatMoments {
+                appId "wxa2b1326fffc49463"
+                appSecret "b1719d1f7dadc42fd63a4a7d34846207"
+                shareByAppClient true
+                bypassApproval true
+            }
+            QQ {
+                appId "1106578014"
+                appKey "pAscwg3NpxwxzOGc"
+                shareByAppClient true
+                bypassApproval true
+                //BypassApproval="true"
+                //Enable="true"
+            }
+            QZone {
+                appId "1106578014"
+                appKey "pAscwg3NpxwxzOGc"
+                //BypassApproval="true"
+                //Enable="true"
+            }
+        }
+    }
+
+}*/

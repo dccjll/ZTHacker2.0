@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/y8"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/y8"
+            android:layout_marginRight="@dimen/y8"
+            android:layout_marginTop="@dimen/y8">
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="课程理念"
+                android:textColor="@color/text_32"
+                android:textSize="@dimen/x14"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_know_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More >"
+                android:textSize="@dimen/x11"
+                android:textColor="@color/text_64"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rlv_pictures"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/y8"
+            android:scrollbars="none"></android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x11"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/simpleDraweeView_head_icon"
+            android:scaleType="centerCrop"
+            android:layout_width="@dimen/x36"
+            android:layout_height="@dimen/x36"
+            android:background="@mipmap/icon_userphote_hl" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_toRightOf="@id/simpleDraweeView_head_icon"
+            android:textColor="@color/comment_username_bg"
+            android:textSize="@dimen/x12"
+            android:text="忧伤的小王子"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x41"
+        android:layout_marginTop="@dimen/x11"
+        android:layout_marginBottom="@dimen/x11"
+        android:textColor="@color/text_32"
+        android:textSize="@dimen/x14"
+        android:maxLines="5"
+        android:ellipsize="end"
+        android:lineSpacingMultiplier="1.3"/>
+
+    <include layout="@layout/view_comment_foot"/>
+
+    <TextView
+        android:id="@+id/tv_comment_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/x11"
+        android:paddingRight="@dimen/x11"
+        android:paddingTop="@dimen/x5"
+        android:paddingBottom="@dimen/x5"
+        android:text="查看全部10条回复>>"
+        android:textColor="@color/text_90"
+        android:textSize="@dimen/x12"
+        android:layout_marginLeft="@dimen/x41"
+        android:layout_marginBottom="@dimen/x11"
+        android:background="@drawable/button_comment_more" />
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/head_top"/>
+    <include layout="@layout/top_view"/>
+
+    <fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard
+        android:id="@+id/videoplayer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y125" />
+
+    <TextView
+        android:id="@+id/tv_teaching_resourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/register_bg"
+        android:paddingTop="@dimen/x6"
+        android:paddingBottom="@dimen/x6"
+        android:paddingLeft="@dimen/x11"
+        android:paddingRight="@dimen/x11"
+        android:layout_margin="@dimen/x11"
+        android:textSize="@dimen/x14"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="查看课件"/>
+</LinearLayout>

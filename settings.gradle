@@ -1,0 +1,1 @@
+include ':app', ':SwipeAndLoadLayout', ':jcvideoplayer-lib', ':ucrop', ':picture_library'

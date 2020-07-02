@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_topview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y31"
+        android:background="@color/tab_bg_fa">
+
+        <LinearLayout
+            android:id="@+id/image_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/x13"
+            android:paddingRight="@dimen/x13">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/top_ico_back" />
+
+            <TextView
+                android:id="@+id/leftText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x4"
+                android:textColor="@color/text_32"
+                android:textSize="@dimen/x16" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/centre_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x71"
+            android:layout_marginRight="@dimen/x71"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/text_32"
+            android:textSize="@dimen/x16" />
+        <TextView
+            android:id="@+id/tv_edit"
+            android:layout_width="@dimen/x44"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text=""
+            android:textSize="@dimen/x12"
+            android:textColor="@color/send_captcha_bg"/>
+
+        <ImageView
+            android:id="@+id/iv_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_send"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x11"
+            android:layout_centerVertical="true"
+            android:visibility="gone"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/ll_top_bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/part_divider"
+        android:orientation="horizontal"></LinearLayout>
+</LinearLayout>

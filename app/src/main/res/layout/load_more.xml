@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loadmore_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/part_divider" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:paddingBottom="@dimen/y12"
+            android:paddingTop="@dimen/y12"
+            android:layout_centerInParent="true" >
+
+            <ImageView
+                android:id="@+id/pullup_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x53"
+                android:background="@mipmap/pullup_icon_big"
+                android:visibility="visible"/>
+
+            <ImageView
+                android:id="@+id/loading_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x53"
+                android:background="@mipmap/loading"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/loadstate_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/pullup_to_load"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/loadstate_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x7"
+                android:layout_toLeftOf="@id/loadstate_tv"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

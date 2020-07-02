@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/head_top" />
+    <include layout="@layout/top_view" />
+
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y28"
+        android:layout_marginLeft="@dimen/x21"
+        android:layout_marginRight="@dimen/x21"
+        android:layout_marginTop="@dimen/y44"
+        android:paddingLeft="@dimen/x11"
+        android:paddingRight="@dimen/x11"
+        android:background="@drawable/register_edit_bg"
+        android:hint="请输入视频激活码"
+        android:textColorHint="@color/text_c0"
+        android:textSize="@dimen/x14"
+        android:textColor="@color/text_64"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y28"
+        android:layout_marginTop="@dimen/y19"
+        android:layout_marginLeft="@dimen/x21"
+        android:layout_marginRight="@dimen/x21">
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="@dimen/x124"
+            android:layout_height="match_parent"
+            android:text="返回扫码"
+            android:textSize="@dimen/x14"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@drawable/register_bg"/>
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="@dimen/x124"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:text="确定"
+            android:textSize="@dimen/x14"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@drawable/confirm_gray_bg"/>
+    </RelativeLayout>
+</LinearLayout>

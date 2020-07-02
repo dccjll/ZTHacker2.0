@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/head_top" />
+    <include layout="@layout/top_view" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/img_steam_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/y23"/>
+        <TextView
+            android:id="@+id/tv_versions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="版本V1.0.0"
+            android:textColor="@color/text_64"
+            android:textSize="@dimen/x14"
+            android:layout_below="@id/iv_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/y4"/>
+        <RelativeLayout
+            android:id="@+id/rl_intro"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y31"
+            android:layout_marginLeft="@dimen/x11"
+            android:layout_marginRight="@dimen/x11"
+            android:layout_below="@id/tv_versions"
+            android:layout_marginTop="@dimen/y15"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="功能介绍"
+                android:textSize="@dimen/x14"
+                android:textColor="@color/text_64"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_next"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/x11"
+            android:background="@color/part_divider_2"
+            android:layout_below="@id/rl_intro"></LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="杭州中天模型有限公司版权所有"
+            android:textSize="@dimen/x9"
+            android:textColor="@color/text_64"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/y31"/>
+    </RelativeLayout>
+
+</LinearLayout>

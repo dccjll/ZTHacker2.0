@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <SurfaceView
+        android:id="@+id/preview_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center" />
+
+
+    <com.example.auser.zthacker.zxing.view.ViewfinderView
+        android:id="@+id/viewfinder_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:layout_gravity="center"
+         android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_input_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y28"
+            android:layout_marginTop="@dimen/y75"
+            android:paddingLeft="@dimen/x21"
+            android:paddingRight="@dimen/x21"
+            android:text="输入视频激活码"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x14"
+            android:background="@drawable/register_bg"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tv_input_scan"
+            android:layout_marginTop="@dimen/y6"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x44"
+            android:paddingRight="@dimen/x44"
+            android:text="将课程二维码放入框内，即可自动扫描"
+            android:textColor="@color/text_90"
+            android:textSize="@dimen/x11"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x53"
+            android:paddingRight="@dimen/x53"
+            android:layout_marginBottom="@dimen/y75"
+            android:text="扫描完成后，课程二维码将与您的账号绑定，同时您也可以观看课程的完整视频"
+            android:textColor="@color/text_90"
+            android:textSize="@dimen/x11"
+            android:lineSpacingMultiplier="1.3"/>
+     </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/head_top" />
+
+        <include layout="@layout/top_view" />
+    </LinearLayout>
+</FrameLayout>

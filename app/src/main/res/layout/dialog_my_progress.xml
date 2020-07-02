@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout_my_progress"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_half"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout_my_progress_child"
+        android:layout_width="@dimen/x222"
+        android:layout_height="wrap_content"
+        android:background="@drawable/view_noline_white_5"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/x9"
+        android:paddingRight="@dimen/x9"
+        android:paddingTop="@dimen/y6"
+        android:paddingBottom="@dimen/y6">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:progressDrawable="@drawable/progress_my"/>
+
+        <TextView
+            android:id="@+id/textVIew_my_progress_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y6"
+            android:text="正在清除缓存..."
+            android:textColor="@color/text_96"
+            android:textSize="@dimen/x11" />
+
+    </LinearLayout>
+</LinearLayout>

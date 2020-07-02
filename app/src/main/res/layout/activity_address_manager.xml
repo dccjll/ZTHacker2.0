@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tab_bg_fa"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_top" />
+    <include layout="@layout/top_view" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/tab_bg_fa"></android.support.v7.widget.RecyclerView>
+        <LinearLayout
+            android:id="@+id/ll_empty_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/tab_bg_fa"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/img_emptystatus"
+                android:scaleType="fitCenter"
+                android:paddingTop="@dimen/y94"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="啊哦~这里空空如也"
+                android:textColor="@color/text_96"
+                android:textSize="@dimen/x16"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/y8"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_add_address"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y28"
+        android:layout_marginLeft="@dimen/x21"
+        android:layout_marginRight="@dimen/x21"
+        android:layout_marginTop="@dimen/y19"
+        android:background="@drawable/register_bg"
+        android:gravity="center"
+        android:text="添加地址"
+        android:textColor="@color/white"
+        android:textSize="@dimen/x16" />
+
+</LinearLayout>

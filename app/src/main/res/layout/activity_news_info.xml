@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/top_view" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+                android:id="@+id/swipe_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/tab_bg_fa"
+                app:default_to_refreshing_scrolling_duration="500"
+                app:load_more_complete_delay_duration="1500"
+                app:load_more_enabled="true"
+                app:load_more_final_drag_offset="@dimen/y38"
+                app:refresh_complete_delay_duration="1500"
+                app:refresh_complete_to_default_scrolling_duration="800"
+                app:refresh_enabled="true"
+                app:refresh_final_drag_offset="@dimen/y38"
+                app:release_to_refreshing_scrolling_duration="0"
+                app:swipe_style="classic">
+
+                <include layout="@layout/layout_normal_refresh_header" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <WebView
+                            android:id="@+id/webapp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="none" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y8"
+                            android:background="@color/tab_bg_fa" />
+
+                        <include layout="@layout/view_community_comment" />
+                    </LinearLayout>
+                </ScrollView>
+
+                <include layout="@layout/layout_normal_refresh_footer" />
+            </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+            <include layout="@layout/view_comment_and_share" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rl_input_comment_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y31"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:visibility="invisible">
+
+        <EditText
+            android:id="@+id/input_comment_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/x8"
+            android:layout_marginLeft="@dimen/x11"
+            android:layout_marginRight="@dimen/x11"
+            android:layout_marginTop="@dimen/x8"
+            android:background="@drawable/comment_input_bg"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:hint="我来说两句~"
+            android:imeOptions="actionDone"
+            android:paddingLeft="@dimen/x5"
+            android:paddingRight="@dimen/x5"
+            android:singleLine="true"
+            android:textColorHint="@color/text_c0"
+            android:textSize="@dimen/x14" />
+    </RelativeLayout>
+</RelativeLayout>

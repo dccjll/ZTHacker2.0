@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="@dimen/x21"
+        android:right="@dimen/x21">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/part_divider_2" />
+            <size android:height="1px"/>
+        </shape>
+    </item>
+</layer-list>

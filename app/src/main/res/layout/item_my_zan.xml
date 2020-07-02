@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x11"
+        android:layout_marginRight="@dimen/x11"
+        android:layout_marginTop="@dimen/y8"
+        android:background="@drawable/view_noline_white_5"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/y8"
+        android:paddingLeft="@dimen/x11"
+        android:paddingRight="@dimen/x11"
+        android:paddingTop="@dimen/y8">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1分钟前"
+            android:textColor="@color/text_90"
+            android:textSize="@dimen/x11" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.3"
+            android:maxLines="2"
+            android:textColor="@color/text_32"
+            android:textSize="@dimen/x14"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.3"
+            android:textColor="@color/text_64"
+            android:textSize="@dimen/x14"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_pictures"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:scrollbars="none"
+                android:visibility="gone"></android.support.v7.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/rl_video"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y131"
+                android:visibility="gone">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/iv_one_picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y131"
+                    android:background="@mipmap/img_placeholder_152"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_video_play"
+                    android:layout_width="@dimen/x27"
+                    android:layout_height="@dimen/x27"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/jc_play_normal"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_total_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/bottom_time"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="2dp"
+                    android:text="00:00"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/y8"
+            android:background="@color/color_f0" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8">
+
+            <LinearLayout
+                android:id="@+id/ll_zan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_zan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_zan"
+                    android:layout_marginTop="@dimen/x1"/>
+                <TextView
+                    android:id="@+id/tv_zan_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12"
+                    android:textColor="@color/text_90"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_zan_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x11"
+                android:layout_toRightOf="@id/ll_zan"
+                android:lineSpacingMultiplier="1.3"
+                android:text="神的孩子在跳舞"
+                android:textColor="@color/text_32"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

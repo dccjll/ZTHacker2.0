@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y28"
+        android:background="@color/color_co_50"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/image_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/x13"
+            android:paddingRight="@dimen/x13">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/top_ico_back" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_video"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="视频"
+                    android:textColor="@color/text_32"
+                    android:textSize="@dimen/x14" />
+
+                <ImageView
+                    android:id="@+id/iv_bottom1"
+                    android:layout_width="@dimen/x60"
+                    android:layout_height="@dimen/y2"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/text_32" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_course_resourse"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_course_resourse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="课件"
+                    android:textColor="@color/text_32"
+                    android:textSize="@dimen/x14" />
+
+                <ImageView
+                    android:id="@+id/iv_bottom2"
+                    android:layout_width="@dimen/x60"
+                    android:layout_height="@dimen/y2"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/text_32" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/part_divider"></LinearLayout>
+
+    <com.example.auser.zthacker.view.MyViewPager
+        android:id="@+id/viewPager_course"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"></com.example.auser.zthacker.view.MyViewPager>
+</LinearLayout>

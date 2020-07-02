@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/bg_introductory"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y81"
+            android:text="选择您可能感兴趣的"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x16" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:text="基于您选择的标签推荐"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x12" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y19"
+            android:layout_marginLeft="@dimen/x21"
+            android:layout_marginRight="@dimen/x21"
+            android:layout_marginTop="@dimen/y19"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_airplane_model"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/label_select_bg"
+                android:gravity="center"
+                android:text="航模"
+                android:textColor="@color/text_32"
+                android:textSize="@dimen/x12" />
+
+            <TextView
+                android:id="@+id/tv_sea_model"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x11"
+                android:layout_weight="1"
+                android:background="@drawable/label_unselect_bg"
+                android:gravity="center"
+                android:text="海模"
+                android:textColor="@color/text_64"
+                android:textSize="@dimen/x12" />
+
+            <TextView
+                android:id="@+id/tv_car_model"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x11"
+                android:layout_weight="1"
+                android:background="@drawable/label_unselect_bg"
+                android:gravity="center"
+                android:text="车模"
+                android:textColor="@color/text_64"
+                android:textSize="@dimen/x12" />
+
+            <TextView
+                android:id="@+id/tv_architect_model"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x11"
+                android:layout_weight="1"
+                android:background="@drawable/label_unselect_bg"
+                android:gravity="center"
+                android:text="建模"
+                android:textColor="@color/text_64"
+                android:textSize="@dimen/x12" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y50"
+            android:text="选择您的身份"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x16" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:text="有助于我们更好的为您服务"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x12" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y19"
+            android:layout_marginLeft="@dimen/x21"
+            android:layout_marginRight="@dimen/x21"
+            android:layout_marginTop="@dimen/y19"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_teacher"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/label_select_bg"
+                android:gravity="center"
+                android:text="老师"
+                android:textColor="@color/text_32"
+                android:textSize="@dimen/x12" />
+
+            <TextView
+                android:id="@+id/tv_student"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x11"
+                android:layout_weight="1"
+                android:background="@drawable/label_unselect_bg"
+                android:gravity="center"
+                android:text="学生"
+                android:textColor="@color/text_64"
+                android:textSize="@dimen/x12" />
+
+            <TextView
+                android:id="@+id/tv_lover"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x11"
+                android:layout_weight="1"
+                android:background="@drawable/label_unselect_bg"
+                android:gravity="center"
+                android:text="爱好者"
+                android:textColor="@color/text_64"
+                android:textSize="@dimen/x12" />
+
+            <TextView
+                android:id="@+id/tv_organization"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x11"
+                android:layout_weight="1"
+                android:background="@drawable/label_unselect_bg"
+                android:gravity="center"
+                android:text="机构"
+                android:textColor="@color/text_64"
+                android:textSize="@dimen/x12" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_next"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y28"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/y28"
+                android:layout_marginLeft="@dimen/x21"
+                android:layout_marginRight="@dimen/x21"
+                android:background="@drawable/next_white_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:text="立即体验>"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x16" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/x11"
+        android:paddingRight="@dimen/x11"
+        android:layout_marginTop="@dimen/x11">
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/x5"
+            android:paddingRight="@dimen/x5"
+            android:textColor="@color/text_90"
+            android:textSize="@dimen/x11"
+            android:text="原创"
+            android:layout_centerVertical="true"
+            android:background="@drawable/new_type_bg"/>
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_type"
+            android:layout_marginLeft="@dimen/x11"
+            android:textColor="@color/text_90"
+            android:textSize="@dimen/x11"
+            android:text="2017-09-21 09:27"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</LinearLayout>

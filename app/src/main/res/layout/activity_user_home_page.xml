@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+            android:id="@+id/swipe_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/tab_bg_fa"
+            app:default_to_refreshing_scrolling_duration="500"
+            app:load_more_complete_delay_duration="1500"
+            app:load_more_enabled="true"
+            app:load_more_final_drag_offset="@dimen/y37"
+            app:refresh_complete_delay_duration="1500"
+            app:refresh_complete_to_default_scrolling_duration="800"
+            app:refresh_enabled="true"
+            app:refresh_final_drag_offset="@dimen/y37"
+            app:release_to_refreshing_scrolling_duration="0"
+            app:swipe_style="classic">
+
+            <include layout="@layout/layout_normal_refresh_header" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/tab_bg_fa"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/send_captcha_bg"
+                            android:paddingTop="@dimen/y10">
+
+                            <LinearLayout
+                                android:id="@+id/ll_back"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/x11"
+                                android:layout_marginTop="@dimen/y8"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/top_icon_back_white"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/simpleDraweeView_head_icon"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="@dimen/y13"
+                                    android:background="@mipmap/icon_userphote_hl"
+                                    android:scaleType="centerCrop"/>
+
+                                <TextView
+                                    android:id="@+id/tv_username"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="@dimen/y4"
+                                    android:text=""
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_is_attention"
+                                    android:layout_width="@dimen/x67"
+                                    android:layout_height="@dimen/y20"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="@dimen/y8"
+                                    android:background="@drawable/next_white_bg"
+                                    android:gravity="center"
+                                    android:text="已关注"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginBottom="@dimen/y8"
+                                    android:layout_marginTop="@dimen/y8"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tv_publish_count"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0  发布"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_attention_count"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/x21"
+                                        android:text="0  关注"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_fans_count"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/x21"
+                                        android:text="0  粉丝"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@id/swipe_target"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/x11"
+                            android:layout_marginBottom="@dimen/x11"
+                            android:background="@color/tab_bg_fa"
+                            android:scrollbars="none" />
+
+                        <include layout="@layout/view_empty_notice" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <include layout="@layout/layout_normal_refresh_footer" />
+        </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+
+        <include layout="@layout/head_top" />
+    </RelativeLayout>
+
+</LinearLayout>

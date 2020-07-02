@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+        android:id="@+id/swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/tab_bg_fa"
+        android:transitionName="pictures"
+        app:default_to_refreshing_scrolling_duration="500"
+        app:load_more_complete_delay_duration="1500"
+        app:load_more_enabled="true"
+        app:load_more_final_drag_offset="@dimen/y37"
+        app:refresh_complete_delay_duration="1500"
+        app:refresh_complete_to_default_scrolling_duration="800"
+        app:refresh_enabled="true"
+        app:refresh_final_drag_offset="@dimen/y37"
+        app:release_to_refreshing_scrolling_duration="0"
+        app:swipe_style="classic">
+
+        <include layout="@layout/layout_normal_refresh_header" />
+
+        <com.example.auser.zthacker.view.ObservableScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <include layout="@layout/head_top" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard
+                        android:id="@+id/videoplayer"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y125"
+                        android:visibility="gone"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/top_view" />
+
+                        <cn.bingoogolapple.bgabanner.BGABanner
+                            android:id="@+id/banner_pictures"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x320"
+                            android:visibility="gone"
+                            app:banner_indicatorGravity="bottom|right"
+                            app:banner_isNeedShowIndicatorOnOnlyOnePage="false"
+                            app:banner_isNumberIndicator="true"
+                            app:banner_numberIndicatorBackground="@drawable/little_corners_gray_bg"
+                            app:banner_numberIndicatorTextColor="@color/white"
+                            app:banner_numberIndicatorTextSize="@dimen/x11"
+                            app:banner_pageChangeDuration="5000"
+                            app:banner_pointAutoPlayAble="true"
+                            app:banner_pointContainerBackground="@color/transparent"
+                            app:banner_pointDrawable="@drawable/banner_dot_bg"
+                            app:banner_pointTopBottomMargin="@dimen/y4"
+                            app:banner_tipTextColor="@color/white"
+                            app:banner_tipTextSize="@dimen/x13"
+                            app:banner_transitionEffect="defaultEffect" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/x11"
+                    android:paddingRight="@dimen/x11"
+                    android:paddingTop="@dimen/x11"
+                    android:text="揭秘飞北赛“挑战者”无人机穿越赛项目规则"
+                    android:textColor="@color/text_32"
+                    android:textSize="@dimen/x16"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="1.3"
+                    android:padding="@dimen/x11"
+                    android:textColor="@color/text_32"
+                    android:textSize="@dimen/x14" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x11"
+                    android:background="@color/color_f0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x11"
+                    android:layout_marginTop="@dimen/x11"
+                    android:text="热门推荐"
+                    android:textColor="@color/text_32"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/swipe_target"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"></android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+        </com.example.auser.zthacker.view.ObservableScrollView>
+
+        <include layout="@layout/layout_normal_refresh_footer" />
+    </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+</LinearLayout>

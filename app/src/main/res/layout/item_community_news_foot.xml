@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y8">
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017-02-12"
+            android:textColor="@color/text_90"
+            android:textSize="@dimen/x11"
+            android:layout_marginLeft="@dimen/x11"/>
+        <TextView
+            android:id="@+id/tv_look"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="2.45k"
+            android:textColor="@color/text_90"
+            android:textSize="@dimen/x11"
+            android:drawableLeft="@mipmap/icon_eye"
+            android:drawablePadding="@dimen/x5"/>
+    </RelativeLayout>
+</LinearLayout>

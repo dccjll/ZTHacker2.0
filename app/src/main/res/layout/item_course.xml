@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/y8"
+        android:padding="@dimen/x11"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <RelativeLayout
+            android:id="@+id/rl_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="极速赛车手"
+                android:textSize="@dimen/x14"
+                android:textColor="@color/text_32"/>
+            <TextView
+                android:id="@+id/tv_know_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="More >"
+                android:textSize="@dimen/x11"
+                android:textColor="@color/text_64"/>
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y100"
+            android:layout_marginTop="@dimen/y8"
+            android:src="@mipmap/img_placeholder_320"/>
+    </LinearLayout>
+</LinearLayout>

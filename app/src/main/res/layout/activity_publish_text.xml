@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_top" />
+
+    <include layout="@layout/top_view" />
+
+    <TextView
+        android:id="@+id/tv_fl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x11"
+        android:layout_marginTop="@dimen/x11"
+        android:text="请选择类容标签（必选）"
+        android:textColor="@color/text_90"
+        android:textSize="@dimen/x12" />
+
+    <com.example.auser.zthacker.view.FlowLayout
+        android:id="@+id/fl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/y4"
+        android:layout_marginLeft="@dimen/x5"
+        android:layout_marginRight="@dimen/x5"
+        android:layout_marginTop="@dimen/y4"></com.example.auser.zthacker.view.FlowLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/y8"
+        android:layout_marginLeft="@dimen/x11"
+        android:layout_marginRight="@dimen/x11"
+        android:layout_marginTop="@dimen/y8"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_input_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/y15"
+                android:layout_marginLeft="@dimen/x11"
+                android:layout_marginRight="@dimen/x11"
+                android:layout_marginTop="@dimen/y15"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:gravity="left|top"
+                android:hint="请输入标题（非必填）"
+                android:singleLine="true"
+                android:textColor="@color/text_64"
+                android:textColorHint="@color/text_c0"
+                android:textSize="@dimen/x12" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/x11"
+                android:layout_marginRight="@dimen/x11"
+                android:background="@color/text_f0" />
+
+            <EditText
+                android:id="@+id/et_input_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/y15"
+                android:layout_marginLeft="@dimen/x11"
+                android:layout_marginRight="@dimen/x11"
+                android:layout_marginTop="@dimen/y15"
+                android:background="@color/white"
+                android:gravity="left|top"
+                android:hint="分享精彩内容..."
+                android:lineSpacingMultiplier="1.5"
+                android:maxLength="2000"
+                android:textColor="@color/text_64"
+                android:textColorHint="@color/text_c0"
+                android:textSize="@dimen/x14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/y8"
+            android:layout_marginRight="@dimen/x11"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/text_c0"
+                android:textSize="@dimen/x11" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/2000"
+                android:textColor="@color/text_64"
+                android:textSize="@dimen/x11" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

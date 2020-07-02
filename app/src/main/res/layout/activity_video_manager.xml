@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_top" />
+
+    <include layout="@layout/top_view" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/iv_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/img_emptystatus"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/y63"/>
+            <TextView
+                android:id="@+id/tv_empty_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y8"
+                android:text="啊哦～ 这里空空如也"
+                android:layout_below="@id/iv_empty"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/x14"
+                android:textColor="@color/text_c0"/>
+            <TextView
+                android:id="@+id/tv_scan"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y28"
+                android:background="@drawable/register_bg"
+                android:layout_marginLeft="@dimen/x21"
+                android:layout_marginRight="@dimen/x21"
+                android:layout_below="@id/tv_empty_content"
+                android:layout_marginTop="@dimen/y19"
+                android:text="扫码看视频"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="@dimen/x16"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*若已有课程产品可通过扫码看视频"
+                android:textSize="@dimen/x11"
+                android:textColor="@color/delete_bg"
+                android:layout_below="@id/tv_scan"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/y8"/>
+        </RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/tab_bg_fa"></android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+</LinearLayout>

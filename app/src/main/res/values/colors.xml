@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="transparent_half">#50000000</color>
+    <color name="transparent_40">#40000000</color>
+    <color name="white">#ffffff</color>
+    <color name="white_20">#20ffffff</color>
+    <color name="tab_bg_fa">#fafafa</color>
+    <color name="black">#000000</color>
+    <color name="bg_ed">#ededed</color>
+    <color name="text_f0">#f0f0f0</color>
+    <color name="white_60">#60ffffff</color>
+    <color name="text_32">#323232</color>
+    <color name="text_64">#646464</color>
+    <color name="text_96">#969696</color>
+    <color name="text_90">#909090</color>
+    <color name="color_f6">#f6f6f6</color>
+    <color name="color_6090">#60909090</color>
+    <color name="text_c0">#c0c0c0</color>
+    <color name="part_divider">#e1e1e1</color>
+    <color name="part_divider_2">#f0f0f0</color>
+    <color name="color_e1">#E1E1E1</color>
+    <color name="color_co_50">#50c0c0c0</color>
+    
+    <color name="send_captcha_bg">#46c6ff</color>
+    <color name="comment_username_bg">#238dbd</color>
+    <color name="send_captcha_bg_20">#2046c6ff</color>
+    <color name="course_info_top_bg">#2080BD</color>
+    <color name="delete_bg">#ee5a5a</color>
+    <color name="message_bg">#ea0f2a</color>
+
+    <!--二维码扫描-->
+    <color name="viewfinder_laser">#ffcc0000</color> <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#c0ffbd21</color> <!-- Android standard ICS color -->
+    <color name="status_text">#ffffffff</color>
+</resources>

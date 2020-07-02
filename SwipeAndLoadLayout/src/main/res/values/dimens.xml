@@ -1,0 +1,14 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="tuya_paint_with">3dp</dimen>
+
+    <dimen name="refresh_header_height_normal">60dp</dimen>
+    <dimen name="load_more_footer_height_normal">60dp</dimen>
+    <dimen name="tvsize">15sp</dimen>
+
+
+
+
+</resources>

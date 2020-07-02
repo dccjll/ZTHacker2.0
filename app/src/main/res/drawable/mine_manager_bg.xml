@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 阴影部分 -->
+    <!-- 个人觉得更形象的表达：top代表下边的阴影高度，left代表右边的阴影宽度。其实也就是相对应的offset，solid中的颜色是阴影的颜色，也可以设置角度等等 -->
+    <!--<item android:left="@dimen/space_v_8"
+        android:top="@dimen/space_v_8">
+        <shape android:shape="rectangle" >
+            <gradient
+                android:angle="90"
+                android:endColor="@color/white"
+                android:startColor="@color/send_captcha_bg_20" />
+        </shape>
+    </item>
+     <item
+        android:bottom="@dimen/space_v_8"
+        android:right="@dimen/space_v_8">
+        <shape android:shape="rectangle" >
+            <gradient
+                android:angle="180"
+                android:endColor="@color/white"
+                android:startColor="@color/white" />
+            <corners
+                android:bottomLeftRadius="@dimen/space_v_10"
+                android:bottomRightRadius="@dimen/space_v_10"
+                />
+        </shape>
+    </item>-->
+
+    <item>
+        <shape android:shape="rectangle">
+            <!--<gradient android:startColor="@color/send_captcha_bg_20"
+                android:endColor="@color/white"
+                android:angle="180"/>-->
+            <solid android:color="@color/send_captcha_bg_20"/>
+            <padding android:right="@dimen/x2"
+                android:left="@dimen/x2"
+                android:bottom="@dimen/x2"
+                android:top="@dimen/x2"/>
+            <corners android:bottomLeftRadius="@dimen/x2"
+                android:bottomRightRadius="@dimen/x2"
+                android:topLeftRadius="@dimen/x2"
+                android:topRightRadius="@dimen/x2"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white"/>
+            <corners android:bottomLeftRadius="@dimen/x2"
+                android:bottomRightRadius="@dimen/x2"
+                android:topLeftRadius="@dimen/x2"
+                android:topRightRadius="@dimen/x2"/>
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x13"
+        android:layout_marginRight="@dimen/x13"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:background="@drawable/dialog_head_setting_bg">
+        <TextView
+            android:id="@+id/textView_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/x13"
+            android:paddingRight="@dimen/x13"
+            android:paddingTop="@dimen/y9"
+            android:paddingBottom="@dimen/y9"
+            android:text="拍照"
+            android:textSize="@dimen/x14"
+            android:textColor="@color/send_captcha_bg"
+            android:gravity="center"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/part_divider"></LinearLayout>
+        <TextView
+            android:id="@+id/textView_local"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/x13"
+            android:paddingRight="@dimen/x13"
+            android:paddingTop="@dimen/y9"
+            android:paddingBottom="@dimen/y9"
+            android:text="我的相册"
+            android:textSize="@dimen/x14"
+            android:textColor="@color/send_captcha_bg"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView_cancel"
+        android:layout_width="@dimen/x289"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y9"
+        android:layout_marginBottom="@dimen/y9"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="@dimen/x13"
+        android:paddingRight="@dimen/x13"
+        android:paddingTop="@dimen/y9"
+        android:paddingBottom="@dimen/y9"
+        android:text="取消"
+        android:textColor="@color/send_captcha_bg"
+        android:textSize="@dimen/x14"
+        android:background="@drawable/dialog_head_setting_bg"
+        android:gravity="center"/>
+
+</LinearLayout>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_top" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+            android:id="@+id/swipe_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:default_to_refreshing_scrolling_duration="500"
+            app:load_more_complete_delay_duration="1500"
+            app:load_more_enabled="true"
+            app:load_more_final_drag_offset="@dimen/y37"
+            app:refresh_complete_delay_duration="1500"
+            app:refresh_complete_to_default_scrolling_duration="800"
+            app:refresh_enabled="true"
+            app:refresh_final_drag_offset="@dimen/y37"
+            app:release_to_refreshing_scrolling_duration="0"
+            app:swipe_style="classic">
+
+            <include layout="@layout/layout_normal_refresh_header" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/swipe_target"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/tab_bg_fa"
+                    android:orientation="vertical">
+
+                    <cn.bingoogolapple.bgabanner.BGABanner
+                        android:id="@+id/banner_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y96"
+                        app:banner_indicatorGravity="bottom|right"
+                        app:banner_pageChangeDuration="5000"
+                        app:banner_pointAutoPlayAble="true"
+                        app:banner_pointContainerBackground="@color/transparent"
+                        app:banner_pointDrawable="@drawable/banner_dot_bg"
+                        app:banner_pointTopBottomMargin="@dimen/y4"
+                        app:banner_tipTextColor="@color/white"
+                        app:banner_tipTextSize="@dimen/x13"
+                        app:banner_transitionEffect="defaultEffect" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x11"
+                        android:layout_marginRight="@dimen/x11"
+                        android:layout_marginTop="@dimen/y8"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/y8"
+                            android:layout_marginRight="@dimen/y8"
+                            android:layout_marginTop="@dimen/y8">
+
+                            <TextView
+                                android:id="@+id/tv_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="课程系列"
+                                android:textColor="@color/text_32"
+                                android:textSize="@dimen/x14"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_class_more"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:text="More >"
+                                android:textColor="@color/text_64"
+                                android:textSize="@dimen/x11" />
+                        </RelativeLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rlv_series"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/y8"
+                            android:scrollbars="none"></android.support.v7.widget.RecyclerView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x11"
+                        android:layout_marginRight="@dimen/x11"
+                        android:layout_marginTop="@dimen/y8"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_class_tool"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/y8"
+                            android:layout_marginRight="@dimen/y8"
+                            android:layout_marginTop="@dimen/y8"
+                            android:text="精选视频/课件"
+                            android:textColor="@color/text_32"
+                            android:textSize="@dimen/x14"
+                            android:textStyle="bold" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rlv_class_tool"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:padding="@dimen/x11"
+                            android:scrollbars="none" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x11"
+                        android:layout_marginRight="@dimen/x11"
+                        android:layout_marginTop="@dimen/y8"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/y8"
+                            android:layout_marginRight="@dimen/y8"
+                            android:layout_marginTop="@dimen/y8">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="精选资讯"
+                                android:textColor="@color/text_32"
+                                android:textSize="@dimen/x14"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_know_more"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:text="More >"
+                                android:textColor="@color/text_64"
+                                android:textSize="@dimen/x11" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_community"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:scrollbars="none" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x11"
+                        android:layout_marginRight="@dimen/x11"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/y8"
+                            android:layout_marginRight="@dimen/y8"
+                            android:layout_marginTop="@dimen/y8">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="精选社区动态"
+                                android:textColor="@color/text_32"
+                                android:textSize="@dimen/x14"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_know_more2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:text="More >"
+                                android:textColor="@color/text_64"
+                                android:textSize="@dimen/x11" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_found"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/x11"
+                        android:focusable="false"
+                        android:scrollbars="none" />
+                </LinearLayout>
+            </ScrollView>
+
+            <include layout="@layout/layout_normal_refresh_footer" />
+        </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+
+        <ImageView
+            android:id="@+id/iv_contact_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/y28"
+            android:layout_marginRight="@dimen/x21"
+            android:src="@mipmap/icon_contact_line" />
+    </RelativeLayout>
+</LinearLayout>

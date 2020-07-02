@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/x13"
+        android:layout_marginRight="@dimen/x13"
+        android:background="@drawable/dialog_head_setting_bg">
+        <TextView
+            android:id="@+id/textView_del"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="@dimen/y9"
+            android:paddingBottom="@dimen/y9"
+            android:text="取消收藏"
+            android:textColor="@color/text_64"
+            android:textSize="@dimen/x16"
+            android:gravity="center"/>
+        <ImageView
+            android:id="@+id/iv_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/part_divider"/>
+        <TextView
+            android:id="@+id/textView_report"
+            android:layout_width="@dimen/x289"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="@dimen/y9"
+            android:paddingBottom="@dimen/y9"
+            android:text="举报"
+            android:textColor="@color/delete_bg"
+            android:textSize="@dimen/x16"
+            android:background="@drawable/dialog_head_setting_bg"
+            android:gravity="center"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/textView_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y4"
+        android:layout_marginBottom="@dimen/y9"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/x13"
+        android:layout_marginRight="@dimen/x13"
+        android:paddingTop="@dimen/y9"
+        android:paddingBottom="@dimen/y9"
+        android:text="取消"
+        android:textColor="@color/text_64"
+        android:textSize="@dimen/x16"
+        android:background="@drawable/dialog_head_setting_bg"
+        android:gravity="center"/>
+
+</LinearLayout>

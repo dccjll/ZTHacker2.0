@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_top" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y28"
+        android:background="@color/tab_bg_fa">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_search"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x11"
+            android:id="@+id/iv_serch"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_community"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x107">
+
+            <TextView
+                android:id="@+id/tv_community"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="社区"
+                android:textColor="@color/text_32"
+                android:textSize="@dimen/x16" />
+
+            <ImageView
+                android:id="@+id/iv_community_underline"
+                android:layout_width="@dimen/x36"
+                android:layout_height="@dimen/y1"
+                android:layout_alignParentBottom="true"
+                android:background="@color/text_32"></ImageView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_news"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x107">
+
+            <TextView
+                android:id="@+id/tv_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="资讯"
+                android:textColor="@color/text_64"
+                android:textSize="@dimen/x16" />
+
+            <ImageView
+                android:id="@+id/iv_news_underline"
+                android:layout_width="@dimen/x36"
+                android:layout_height="@dimen/y1"
+                android:layout_alignParentBottom="true"
+                android:background="@color/text_32"
+                android:visibility="invisible"></ImageView>
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_publish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x11"
+            android:src="@mipmap/icon_send" />
+    </RelativeLayout>
+
+    <com.example.auser.zthacker.view.MyViewPager
+        android:id="@+id/viewPager_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"></com.example.auser.zthacker.view.MyViewPager>
+
+</LinearLayout>

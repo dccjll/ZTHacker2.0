@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/head_top"/>
+    <include layout="@layout/top_view"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/y8"></android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/tv_complete"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y28"
+        android:layout_marginLeft="@dimen/x21"
+        android:layout_marginRight="@dimen/x21"
+        android:gravity="center"
+        android:text="完成"
+        android:textColor="@color/white"
+        android:textSize="@dimen/x16"
+        android:layout_below="@id/input_password"
+        android:layout_marginTop="@dimen/y19"
+        android:background="@drawable/register_bg"/>
+
+</LinearLayout>

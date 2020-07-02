@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x13"
+        android:layout_marginRight="@dimen/x13"
+        android:background="@drawable/view_noline_white_5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/x11">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/wechat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/wechat" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/WechatMoments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/wechat_circle" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/sina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/sina" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/qq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/qq" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView_cancel"
+        android:layout_width="@dimen/x289"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y6"
+        android:layout_marginBottom="@dimen/y9"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="@dimen/x13"
+        android:paddingRight="@dimen/x13"
+        android:paddingTop="@dimen/y9"
+        android:paddingBottom="@dimen/y9"
+        android:text="取消"
+        android:textColor="@color/text_64"
+        android:textSize="@dimen/x14"
+        android:background="@drawable/view_noline_white_5"
+        android:gravity="center"/>
+</LinearLayout>

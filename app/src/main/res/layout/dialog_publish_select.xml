@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/x13"
+        android:layout_marginRight="@dimen/x13"
+        android:background="@drawable/dialog_head_setting_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_first_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/x5"
+            android:gravity="center"
+            android:paddingBottom="@dimen/y9"
+            android:paddingLeft="@dimen/x13"
+            android:paddingRight="@dimen/x13"
+            android:paddingTop="@dimen/y9"
+            android:text="纯文字"
+            android:textColor="@color/text_32"
+            android:textSize="@dimen/x16" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/part_divider"></LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_second_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/x5"
+            android:gravity="center"
+            android:paddingBottom="@dimen/y9"
+            android:paddingLeft="@dimen/x13"
+            android:paddingRight="@dimen/x13"
+            android:paddingTop="@dimen/y9"
+            android:text="图片或视频"
+            android:textColor="@color/text_32"
+            android:textSize="@dimen/x16" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/x13"
+        android:layout_marginTop="@dimen/y9"
+        android:background="@drawable/dialog_head_setting_bg"
+        android:gravity="center"
+        android:paddingBottom="@dimen/y9"
+        android:layout_marginLeft="@dimen/x13"
+        android:layout_marginRight="@dimen/x13"
+        android:paddingTop="@dimen/y9"
+        android:text="取消"
+        android:textColor="@color/text_64"
+        android:textSize="@dimen/x16" />
+</LinearLayout>
